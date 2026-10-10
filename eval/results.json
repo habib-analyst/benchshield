@@ -1,0 +1,46 @@
+{
+  "cherry_pick": {
+    "n_sims": 2000,
+    "tpr": 0.8991,
+    "fpr": 0.054,
+    "n_cherry": 575,
+    "n_honest": 1425,
+    "mean_best_seed_inflation": 0.01394,
+    "max_best_seed_inflation": 0.01491
+  },
+  "duplicate_injection": {
+    "0.0": {
+      "n_injected": 0,
+      "recall": null,
+      "flagged_total": 12,
+      "flagged_fraction": 0.03
+    },
+    "0.01": {
+      "n_injected": 4,
+      "recall": 1.0,
+      "flagged_total": 16,
+      "flagged_fraction": 0.04
+    },
+    "0.05": {
+      "n_injected": 20,
+      "recall": 1.0,
+      "flagged_total": 31,
+      "flagged_fraction": 0.0775
+    },
+    "0.1": {
+      "n_injected": 40,
+      "recall": 1.0,
+      "flagged_total": 52,
+      "flagged_fraction": 0.13
+    }
+  },
+  "canary": {
+    "n_trials": 12,
+    "n_canaries": 20,
+    "tpr": 0.8333,
+    "fpr": 0.0,
+    "mean_gap_memorized": 0.2099,
+    "mean_gap_clean": -0.2859
+  },
+  "elapsed_s": 71.7
+}

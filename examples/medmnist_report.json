@@ -1,0 +1,426 @@
+{
+  "title": "Benchmark integrity report",
+  "verdict": "UNRELIABLE",
+  "sections": {
+    "seed_spread": {
+      "grade": "FAIL",
+      "detail": "3/3 cells unstable; worst spread 0.0295 (breastmnist/resnet18)",
+      "data": {
+        "metric": "test_auc",
+        "threshold": 0.01,
+        "n_cells": 3,
+        "n_unstable": 3,
+        "worst_spread": 0.029450000000000087,
+        "worst_cell": "breastmnist/resnet18",
+        "rank_stability": {
+          "breastmnist": {
+            "n_models": 1,
+            "n_common_seeds": 5,
+            "mean_pairwise_tau": null,
+            "note": "insufficient overlap"
+          },
+          "retinamnist": {
+            "n_models": 1,
+            "n_common_seeds": 5,
+            "mean_pairwise_tau": null,
+            "note": "insufficient overlap"
+          },
+          "pneumoniamnist": {
+            "n_models": 1,
+            "n_common_seeds": 5,
+            "mean_pairwise_tau": null,
+            "note": "insufficient overlap"
+          }
+        },
+        "cells": [
+          {
+            "dataset": "breastmnist",
+            "model": "resnet18",
+            "n": 5,
+            "mean": 0.90739,
+            "std": 0.01028,
+            "spread": 0.02945,
+            "min": 0.89223,
+            "max": 0.92168,
+            "unstable": true,
+            "best_seed_inflation": 0.01429
+          },
+          {
+            "dataset": "pneumoniamnist",
+            "model": "resnet18",
+            "n": 5,
+            "mean": 0.94639,
+            "std": 0.01061,
+            "spread": 0.02723,
+            "min": 0.93407,
+            "max": 0.9613,
+            "unstable": true,
+            "best_seed_inflation": 0.01491
+          },
+          {
+            "dataset": "retinamnist",
+            "model": "resnet18",
+            "n": 5,
+            "mean": 0.72897,
+            "std": 0.00814,
+            "spread": 0.0255,
+            "min": 0.71616,
+            "max": 0.74166,
+            "unstable": true,
+            "best_seed_inflation": 0.01269
+          }
+        ]
+      }
+    },
+    "scaffold_sensitivity": {
+      "grade": "PASS",
+      "detail": "rankings identical across aggregations",
+      "data": {
+        "breastmnist": {
+          "rankings": {
+            "mean": [
+              "resnet18"
+            ],
+            "median": [
+              "resnet18"
+            ],
+            "best_seed": [
+              "resnet18"
+            ],
+            "worst_seed": [
+              "resnet18"
+            ]
+          },
+          "pairwise_tau": {
+            "mean_vs_median": 1.0,
+            "mean_vs_best_seed": 1.0,
+            "mean_vs_worst_seed": 1.0,
+            "median_vs_best_seed": 1.0,
+            "median_vs_worst_seed": 1.0,
+            "best_seed_vs_worst_seed": 1.0
+          },
+          "min_tau": 1.0,
+          "fragile": false
+        },
+        "pneumoniamnist": {
+          "rankings": {
+            "mean": [
+              "resnet18"
+            ],
+            "median": [
+              "resnet18"
+            ],
+            "best_seed": [
+              "resnet18"
+            ],
+            "worst_seed": [
+              "resnet18"
+            ]
+          },
+          "pairwise_tau": {
+            "mean_vs_median": 1.0,
+            "mean_vs_best_seed": 1.0,
+            "mean_vs_worst_seed": 1.0,
+            "median_vs_best_seed": 1.0,
+            "median_vs_worst_seed": 1.0,
+            "best_seed_vs_worst_seed": 1.0
+          },
+          "min_tau": 1.0,
+          "fragile": false
+        },
+        "retinamnist": {
+          "rankings": {
+            "mean": [
+              "resnet18"
+            ],
+            "median": [
+              "resnet18"
+            ],
+            "best_seed": [
+              "resnet18"
+            ],
+            "worst_seed": [
+              "resnet18"
+            ]
+          },
+          "pairwise_tau": {
+            "mean_vs_median": 1.0,
+            "mean_vs_best_seed": 1.0,
+            "mean_vs_worst_seed": 1.0,
+            "median_vs_best_seed": 1.0,
+            "median_vs_worst_seed": 1.0,
+            "best_seed_vs_worst_seed": 1.0
+          },
+          "min_tau": 1.0,
+          "fragile": false
+        }
+      }
+    },
+    "contamination": {
+      "grade": "FAIL",
+      "detail": "train/test near-duplicate overlap 35.256%",
+      "data": {
+        "near_duplicate": {
+          "n_test": 156,
+          "n_train": 546,
+          "n_flagged": 55,
+          "fraction": 0.3525641025641026,
+          "threshold": 5,
+          "pairs": [
+            [
+              2,
+              146,
+              1
+            ],
+            [
+              7,
+              18,
+              1
+            ],
+            [
+              8,
+              42,
+              1
+            ],
+            [
+              10,
+              287,
+              2
+            ],
+            [
+              12,
+              484,
+              5
+            ],
+            [
+              18,
+              2,
+              0
+            ],
+            [
+              20,
+              132,
+              2
+            ],
+            [
+              21,
+              89,
+              1
+            ],
+            [
+              25,
+              172,
+              2
+            ],
+            [
+              28,
+              197,
+              3
+            ],
+            [
+              32,
+              119,
+              4
+            ],
+            [
+              36,
+              318,
+              2
+            ],
+            [
+              37,
+              493,
+              1
+            ],
+            [
+              38,
+              231,
+              5
+            ],
+            [
+              39,
+              337,
+              4
+            ],
+            [
+              40,
+              118,
+              5
+            ],
+            [
+              41,
+              484,
+              5
+            ],
+            [
+              43,
+              235,
+              1
+            ],
+            [
+              44,
+              199,
+              1
+            ],
+            [
+              47,
+              157,
+              2
+            ],
+            [
+              48,
+              536,
+              1
+            ],
+            [
+              49,
+              97,
+              5
+            ],
+            [
+              50,
+              20,
+              1
+            ],
+            [
+              51,
+              452,
+              2
+            ],
+            [
+              53,
+              78,
+              3
+            ],
+            [
+              54,
+              320,
+              5
+            ],
+            [
+              59,
+              350,
+              4
+            ],
+            [
+              61,
+              193,
+              2
+            ],
+            [
+              64,
+              433,
+              2
+            ],
+            [
+              65,
+              427,
+              1
+            ],
+            [
+              70,
+              279,
+              4
+            ],
+            [
+              71,
+              54,
+              0
+            ],
+            [
+              72,
+              277,
+              3
+            ],
+            [
+              76,
+              115,
+              0
+            ],
+            [
+              78,
+              517,
+              1
+            ],
+            [
+              79,
+              106,
+              4
+            ],
+            [
+              80,
+              421,
+              0
+            ],
+            [
+              81,
+              413,
+              2
+            ],
+            [
+              89,
+              104,
+              3
+            ],
+            [
+              93,
+              435,
+              3
+            ],
+            [
+              97,
+              77,
+              2
+            ],
+            [
+              98,
+              88,
+              0
+            ],
+            [
+              100,
+              154,
+              1
+            ],
+            [
+              115,
+              266,
+              1
+            ],
+            [
+              121,
+              299,
+              4
+            ],
+            [
+              122,
+              422,
+              3
+            ],
+            [
+              123,
+              297,
+              1
+            ],
+            [
+              129,
+              348,
+              2
+            ],
+            [
+              133,
+              3,
+              1
+            ],
+            [
+              134,
+              143,
+              2
+            ]
+          ]
+        },
+        "canary": null
+      }
+    }
+  }
+}

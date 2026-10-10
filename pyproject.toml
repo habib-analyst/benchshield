@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "benchshield"
+version = "0.1.0"
+description = "Benchmark integrity toolkit: is this leaderboard lying to you?"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+authors = [{name = "Habib Ur Rehman"}]
+keywords = ["benchmark", "reproducibility", "ml-evaluation", "leaderboard"]
+dependencies = ["numpy", "Pillow"]
+optional-dependencies = {dev = ["pytest"]}
+
+[project.scripts]
+benchshield = "benchshield.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/habib-analyst/benchshield"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["benchshield*"]
