@@ -17,7 +17,7 @@ benchshield audit results.csv --metric test_auc
 | contamination | FAIL | train/test near-duplicate overlap 35.256% |
 ```
 
-![seed spread on real MedMNIST runs](seed_spread.png)
+![seed spread on real MedMNIST runs](seed_spread.svg)
 
 ## Why you want this
 
